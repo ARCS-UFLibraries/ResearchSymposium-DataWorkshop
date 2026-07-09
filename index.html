@@ -79,7 +79,7 @@ body {
 
 	<!-- 5. Stage 2: Data Processing -->
     <section>
-      <h2>Stage 3 – Processing (Cleaning / Transformation)</h2>
+      <h2>Stage 2 – Processing (Cleaning / Transformation)</h2>
       <p>Open the CSV in a tool of your choice (Excel, R, Python) and apply any cleaning steps.  The output remains a new CSV.</p>
       <ul>
         <li>Remove rows with missing values.</li>
@@ -91,7 +91,7 @@ body {
 	  
     <!-- 6. Stage 3: Documentation -->
     <section>
-      <h2>Stage 2 – Documentation (Metadata)</h2>
+      <h2>Stage 3 – Documentation (Metadata)</h2>
       <p>Create a simple <strong>Dublin‑Core</strong> header for the file.  We’ll build the XML by hand.</p>
       <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;dc:RDF xmlns:dc="http://purl.org/dc/elements/1.1/"&gt;
@@ -101,7 +101,7 @@ body {
   &lt;dc:format&gt;text/csv&lt;/dc:format&gt;
   &lt;dc:date&gt;2026-07-01&lt;/dc:date&gt;
 &lt;/dc:RDF&gt;</code></pre>
-      <p>Save this to <code>experiment_01_dc.xml</code>.</p>
+      <p>Save this to <code>starter_data_metadata_dc.xml</code>.</p>
     </section>
 
     
@@ -110,29 +110,33 @@ body {
     <section>
       <h2>Stage 4 – Preservation (Versioning)</h2>
       <ol>
-        <li>Create a Google Drive folder called <code>UF-Research-Data‑Demo</code>.</li>
+        <li>Create a Google Drive folder called <code>UF-Libraries-Data‑Demo</code>.</li>
         <li>Upload:
           <ul>
-            <li><code>experiment_01_raw.csv</code></li>
-            <li><code>experiment_01_clean.csv</code></li>
-            <li><code>experiment_01_dc.xml</code></li>
+            <li><code>starter_data_raw.csv</code></li>
+            <li><code>starter_data_clean.csv</code></li>
+            <li><code>starter_data_metadata_dc.xml</code></li>
           </ul>
         </li>
+	   </ol>  
+    </section>
+	
+	  <!-- 8. split Stage 4: Preservation -->
+		<section>
         <li>Create a Google Sheet named <code>Version‑History</code> with columns:
           <blockquote>
             <table>
               <tr><th>File</th><th>Version</th><th>Change</th><th>Timestamp</th></tr>
-              <tr><td>experiment_01_raw.csv</td><td>0.1</td><td>Initial upload</td><td>2026‑07‑01</td></tr>
-              <tr><td>experiment_01_clean.csv</td><td>0.1</td><td>Initial cleaning</td><td>2026‑07‑01</td></tr>
-              <tr><td>experiment_01_dc.xml</td><td>0.1</td><td>Metadata header</td><td>2026‑07‑01</td></tr>
+              <tr><td>starter_data_raw.csv</td><td>0.1</td><td>Initial upload</td><td>2026‑07‑01</td></tr>
+              <tr><td>starter_data_clean.csv</td><td>0.1</td><td>Initial cleaning</td><td>2026‑07‑01</td></tr>
+              <tr><td>starter_data_metadata_dc.xml</td><td>0.1</td><td>Metadata header</td><td>2026‑07‑01</td></tr>
             </table>
           </blockquote>
         </li>
         <li>Share the folder with <em>read‑only</em> link (no external sharing yet).</li>
-      </ol>
     </section>
 
-    <!-- 8. Stage 5: Discovery -->
+    <!-- 9. Stage 5: Discovery -->
     <section>
       <h2>Stage 5 – Discovery (Indexing & DOI)</h2>
       <ol>
@@ -144,7 +148,7 @@ body {
       </ol>
     </section>
 
-    <!-- 9. Stage 6: Data Reuse and disposition-->
+    <!-- 10. Stage 6: Data Reuse and disposition-->
     <section>
       <h2>Stage 6 – Data Reuse (Archiving / Deletion)</h2>
       <p>When a dataset is no longer actively used:</p>
@@ -156,7 +160,7 @@ body {
       <p>Policy: follow UF Acceptable data use’ <a href=https://policy.ufl.edu/policy/acceptable-data-use/" target="_blank"> guide</a>.</p>
     </section>
 
-    <!-- 10. Mini‑Quiz -->
+    <!-- 11. Mini‑Quiz -->
     <section>
       <h2>Mini‑Quiz (Pre / Post)</h2>
       <form id="quizForm">
@@ -173,10 +177,10 @@ body {
         <label><input type="radio" name="q3" value="4"> To validate metadata</label><br><br>
         <button type="button" onclick="submitQuiz()">Submit</button>
       </form>
-      <div id="quizResult" style="margin-top:1em;"></div>
+      <div id="quizResult" style="margin-top:0.5em;"></div>
     </section>
 
-    <!-- 11. Action Plan -->
+    <!-- 12. Action Plan -->
     <section>
       <h2>Your Action Plan</h2>
       <p>Copy the bullets below into a note or form and fill them out.</p>
@@ -187,7 +191,7 @@ Owner: _________________________
 Deadline (date): ___________________</code></pre>
     </section>
 
-    <!-- 12. Resources & Thanks -->
+    <!-- 13. Resources & Thanks -->
     <section data-background="#0047AB">
       <h2 style="color:white;">UF Data & Research Resources</h2>
       <ul style="color:white;">
