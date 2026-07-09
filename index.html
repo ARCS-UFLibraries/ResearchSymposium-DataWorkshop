@@ -26,9 +26,9 @@ body {
 
   <!-- Optional Theme Override -->
   <style>
-    .reveal h2{margin-top:1.0em;}
-    .reveal pre{font-size:0.85em;}
-    .reveal .quiz option{font-size:1.0em;}
+    .reveal h2{margin-top:0.75em;}
+    .reveal pre{font-size:0.75em;}
+    .reveal .quiz option{font-size:0.75em;}
   </style>
 </head>
 
@@ -57,16 +57,16 @@ body {
     <section>
       <h2>Research Data Life‑Cycle</h2>
       <ul>
-        <li>1️⃣ <strong>Generation (Data Collection)</strong></li>
-        <li>2️⃣ <strong>Documentation (Metadata)</strong></li>
-        <li>3️⃣ <strong>Processing (Cleaning / Transformation)</strong></li>
-        <li>4️⃣ <strong>Preservation (Versioning)</strong></li>
+        <li>1️⃣ <strong>Data Collection </strong></li>
+        <li>2️⃣ <strong>Data Processing (Cleaning / Transformation)</strong></li>
+        <li>3️⃣ <strong>Documentation and Metadata</strong></li>
+        <li>4️⃣ <strong>Data Preservation and Versioning </strong></li>
         <li>5️⃣ <strong>Discovery (Indexing & DOI)</strong></li>
-        <li>6️⃣ <strong>Disposition (Archiving / Deletion)</strong></li>
+        <li>6️⃣ <strong>Data Reuse or disposition (Archiving / Deletion)</strong></li>
       </ul>
     </section>
 
-    <!-- 4. Stage 1: Generation -->
+    <!-- 4. Stage 1: Data Collection -->
     <section>
       <h2>Stage 1 – Generation (Data Collection)</h2>
       <p>Start with a raw data file (e.g., a CSV, an RDS, or an Excel spreadsheet).  For the demo we’ll use a tiny sample CSV.</p>
@@ -75,10 +75,21 @@ body {
 002,18.1,2026‑06‑12
 003,22.0,2026‑06‑12
 </code></pre>
-      <p>Discussion: Which formats are you using the most at UF?</p>
     </section>
 
-    <!-- 5. Stage 2: Documentation -->
+	<!-- 5. Stage 2: Data Processing -->
+    <section>
+      <h2>Stage 3 – Processing (Cleaning / Transformation)</h2>
+      <p>Open the CSV in a tool of your choice (Excel, R, Python) and apply any cleaning steps.  The output remains a new CSV.</p>
+      <ul>
+        <li>Remove rows with missing values.</li>
+        <li>Convert units, if needed.</li>
+        <li>Rename columns for consistency.</li>
+      </ul>
+      <p>Export the clean file as <code>experiment_01_clean.csv</code> and keep both the raw and cleaned files.</p>
+    </section>
+	  
+    <!-- 6. Stage 3: Documentation -->
     <section>
       <h2>Stage 2 – Documentation (Metadata)</h2>
       <p>Create a simple <strong>Dublin‑Core</strong> header for the file.  We’ll build the XML by hand.</p>
@@ -93,17 +104,7 @@ body {
       <p>Save this to <code>experiment_01_dc.xml</code>.</p>
     </section>
 
-    <!-- 6. Stage 3: Processing -->
-    <section>
-      <h2>Stage 3 – Processing (Cleaning / Transformation)</h2>
-      <p>Open the CSV in a tool of your choice (Excel, R, Python) and apply any cleaning steps.  The output remains a new CSV.</p>
-      <ul>
-        <li>Remove rows with missing values.</li>
-        <li>Convert units, if needed.</li>
-        <li>Rename columns for consistency.</li>
-      </ul>
-      <p>Export the clean file as <code>experiment_01_clean.csv</code> and keep both the raw and cleaned files.</p>
-    </section>
+    
 
     <!-- 7. Stage 4: Preservation -->
     <section>
@@ -143,9 +144,9 @@ body {
       </ol>
     </section>
 
-    <!-- 9. Stage 6: Disposition -->
+    <!-- 9. Stage 6: Data Reuse and disposition-->
     <section>
-      <h2>Stage 6 – Disposition (Archiving / Deletion)</h2>
+      <h2>Stage 6 – Data Reuse (Archiving / Deletion)</h2>
       <p>When a dataset is no longer actively used:</p>
       <ul>
         <li>Move the Google Drive folder to an archival location (e.g., UF Data Bank)</li>
@@ -165,13 +166,7 @@ body {
         <label><input type="radio" name="q1" value="3"> Discovery</label><br>
         <label><input type="radio" name="q1" value="4"> Disposition</label>
 
-        <p>2. Which metadata format is used in this demo?</p>
-        <label><input type="radio" name="q2" value="1"> MARC</label><br>
-        <label><input type="radio" name="q2" value="2"> Dublin‑Core XML</label><br>
-        <label><input type="radio" name="q2" value="3"> YAML</label><br>
-        <label><input type="radio" name="q2" value="4"> JSON</label>
-
-        <p>3. What is the purpose of the <code>Version‑History</code> sheet?</p>
+        <p>2. What is the purpose of the <code>Version‑History</code> sheet?</p>
         <label><input type="radio" name="q3" value="1"> To list data files</label><br>
         <label><input type="radio" name="q3" value="2"> To keep a log of every edit</label><br>
         <label><input type="radio" name="q3" value="3"> To assign DOIs</label><br>
